@@ -9,8 +9,7 @@ import { Prisma } from '@prisma/client';
 export class AuthService {
   constructor(
     private prisma: PrismaService,
-    private jwtService: JwtService,
-    private usersService: UsersService,
+    private jwtService: JwtService
   ) {}
 
   async login(username: string, pass: string): Promise<any> {

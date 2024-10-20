@@ -4,8 +4,6 @@ import { UpdateUserDto } from './dto/update-user.dto';
 import { Prisma } from '@prisma/client';
 import * as bcrypt from 'bcrypt';
 import { AuthGuard } from 'src/auth/auth.guard';
-import { RolesGuard } from 'src/roles.guard';
-import { Roles } from 'src/roles.decorator';
 import { FileInterceptor } from '@nestjs/platform-express';
 
 @Controller('users')

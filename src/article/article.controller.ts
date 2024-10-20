@@ -3,7 +3,6 @@ import {
   Get,
   Post,
   Body,
-  Patch,
   Param,
   Delete,
   UseGuards,
@@ -11,15 +10,11 @@ import {
   Request,
   UploadedFile,
   UseInterceptors,
-  Response,
 } from '@nestjs/common';
 import { ArticleService } from './article.service';
-import { CreateArticleDto } from './dto/create-article.dto';
-import { UpdateArticleDto } from './dto/update-article.dto';
 import { Roles } from 'src/roles.decorator';
 import { AuthGuard } from 'src/auth/auth.guard';
 import { RolesGuard } from 'src/roles.guard';
-import { Prisma } from '@prisma/client';
 import { FileInterceptor } from '@nestjs/platform-express';
 
 @Controller('article')

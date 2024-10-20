@@ -1,5 +1,4 @@
 import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
-import { UpdateArticleDto } from './dto/update-article.dto';
 import { Prisma } from '@prisma/client';
 import { PrismaService } from 'src/prisma.service';
 import { CloudinaryService } from 'src/clodinary/clodinary.service';
