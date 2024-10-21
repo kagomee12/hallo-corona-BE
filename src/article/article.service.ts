@@ -1,7 +1,7 @@
 import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
 import { Prisma } from '@prisma/client';
-import { PrismaService } from 'src/prisma.service';
-import { CloudinaryService } from 'src/clodinary/clodinary.service';
+import { PrismaService } from '../prisma.service';
+import { CloudinaryService } from '../clodinary/clodinary.service';
 
 @Injectable()
 export class ArticleService {

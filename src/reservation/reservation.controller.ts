@@ -1,9 +1,9 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, Request } from '@nestjs/common';
 import { ReservationService } from './reservation.service';
 import { UpdateReservationDto } from './dto/update-reservation.dto';
-import { AuthGuard } from 'src/auth/auth.guard';
-import { RolesGuard } from 'src/roles.guard';
-import { Roles } from 'src/roles.decorator';
+import { AuthGuard } from '../auth/auth.guard';
+import { RolesGuard } from '../guard/roles.guard';
+import { Roles } from '../guard/roles.decorator';
 import { Prisma, Status } from '@prisma/client';
 
 @Controller('reservation')

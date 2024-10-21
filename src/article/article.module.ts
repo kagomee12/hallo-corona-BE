@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { ArticleService } from './article.service';
 import { ArticleController } from './article.controller';
-import { PrismaService } from 'src/prisma.service';
-import { ClodinaryModule } from 'src/clodinary/clodinary.module';
+import { PrismaService } from '../prisma.service';
+import { ClodinaryModule } from '../clodinary/clodinary.module';
 
 @Module({
   controllers: [ArticleController],

@@ -12,14 +12,14 @@ import {
   UseInterceptors,
 } from '@nestjs/common';
 import { ArticleService } from './article.service';
-import { Roles } from 'src/roles.decorator';
-import { AuthGuard } from 'src/auth/auth.guard';
-import { RolesGuard } from 'src/roles.guard';
+import { Roles } from '../guard/roles.decorator';
+import { AuthGuard } from '../auth/auth.guard';
+import { RolesGuard } from '../guard/roles.guard';
 import { FileInterceptor } from '@nestjs/platform-express';
 
 @Controller('article')
 export class ArticleController {
-  constructor(private readonly articleService: ArticleService) {}
+  constructor(private readonly articleService: ArticleService) { }
 
   @UseGuards(AuthGuard, RolesGuard)
   @Roles('doctor')
