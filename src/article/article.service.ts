@@ -1,11 +1,11 @@
 import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
 import { Prisma } from '@prisma/client';
-import { PrismaService } from '../prisma.service';
+import { PrismaService } from '../prisma/prisma.service';
 import { CloudinaryService } from '../clodinary/clodinary.service';
 
 @Injectable()
 export class ArticleService {
-  constructor(private prisma: PrismaService, private cloudinary: CloudinaryService) {}
+  constructor(private prisma: PrismaService, private cloudinary: CloudinaryService) { }
 
   async create(createArticleDto: { title: string; content: string; authorId: number; categoryId: number; picture?: string }, file: Express.Multer.File) {
     try {

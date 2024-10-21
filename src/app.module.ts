@@ -7,7 +7,7 @@ import { ArticleModule } from './article/article.module';
 import { ReservationModule } from './reservation/reservation.module';
 import { ClodinaryModule } from './clodinary/clodinary.module';
 import { CategoryModule } from './category/category.module';
-import { PrismaService } from './prisma.service';
+import { PrismaService } from './prisma/prisma.service';
 import { ArticleService } from './article/article.service';
 import { AuthService } from './auth/auth.service';
 import { ReservationService } from './reservation/reservation.service';
@@ -16,8 +16,24 @@ import { CloudinaryService } from './clodinary/clodinary.service';
 import { CategoryService } from './category/category.service';
 
 @Module({
-  imports: [UsersModule, AuthModule, ArticleModule, ReservationModule, ClodinaryModule, CategoryModule],
+  imports: [
+    UsersModule,
+    AuthModule,
+    ArticleModule,
+    ReservationModule,
+    ClodinaryModule,
+    CategoryModule,
+  ],
   controllers: [AppController],
-  providers: [AppService, PrismaService, ArticleService, AuthService, ReservationService, UsersService, CloudinaryService, CategoryService],
+  providers: [
+    AppService,
+    PrismaService,
+    ArticleService,
+    AuthService,
+    ReservationService,
+    UsersService,
+    CloudinaryService,
+    CategoryService,
+  ],
 })
-export class AppModule { }
+export class AppModule {}

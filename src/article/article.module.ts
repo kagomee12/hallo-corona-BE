@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ArticleService } from './article.service';
 import { ArticleController } from './article.controller';
-import { PrismaService } from '../prisma.service';
+import { PrismaService } from '../prisma/prisma.service';
 import { ClodinaryModule } from '../clodinary/clodinary.module';
 
 @Module({
@@ -9,4 +9,4 @@ import { ClodinaryModule } from '../clodinary/clodinary.module';
   providers: [ArticleService, PrismaService],
   imports: [ClodinaryModule]
 })
-export class ArticleModule {}
+export class ArticleModule { }
